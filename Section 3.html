@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<HTML>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Section 3 Review - The Power of Abstraction</title>
+  </head>
+  <body>
+      <div class="bsd">BS"D</div>
+      <div class="lesson">
+        <h1>Lesson 1: Use Functions</h1>
+              <div class="lesson-content">
+                <h2>Abstraction</h2>
+                  Abstraction allows us to focus on the actual program we want to create while utilizing functions which are included in the software langauge, examples include opening a browser or printing the time. E.g. <br>
+                    <br><div class="example">
+                      import time <br>
+                      time.sleep(10) <br>
+                      <br>
+                      This example shows how the time function is brought into the coding and used. In this example the code will be run after a ten second delay.
+                      </div>
+              </div>
+        </div>
+        <div class="lesson">
+          <h1>Lesson 2: Use Classes</h1>
+              <div class="lesson-content">
+                <h2>Classes and Instances (or Objects)</h2>
+                  Classes are like blueprints of a building containing the dimensions. An instance is the creation of a new object using the same class which may be altered in some way, such as changing the color of the building.
+              </div>
+              <div class="lesson-content">
+                <h2>Questions about Answers</h2>
+                  <h3>What is an OOP language?</h3>
+                    An orient-oriented programming language allows sturcturing to create consistent, clear and simplified code.
+                  <h3>What is a class?</h3>
+                    A class is a template for creating objects in code. They are the blueprints which can then be adapted for each object which needs to be created.
+                  <h3>What is an instance?</h3>
+                    An instance is an single example of a class.<br>
+                      <br><div class="example">
+                        For example vehicles may be a class. Cars may be another example of a class which may inherit some of the information from the vehicle class. A specific model of a car may be an instance.
+                      </div>
+               </div>
+        </div>
+        <div class="lesson">
+          <h1>Lesson 3a: Making Classes</h1>
+            <div class="lesson-content">
+              <h2>Constructor</h2>
+                Init means "initialized", this reserves space in memory to store the details information for the relevant object.<br>
+                  <br><div class="example">
+                    class Movie():<br>
+                      &nbsp;def __init__(self, movie_title, movie_storyline)<br>
+                        &nbsp;&nbsp;self.title = movie_title <em>(this is the first instance variable)</em><br> 
+                        &nbsp;&nbsp;self.storyline = movie_storyline <em>(this is the second instance variable)</em><br>
+                    <br>
+                    toy_story = Movie("Toy Story","A story of a boy and his toys that come to life") <em>(this is an instance)</em><br>
+                    <br>
+                    print(toy_story.title) --> Toy Story<br>
+                    print(toy_story.storyline) --> A story of a boy and his toys that come to life.
+                  </div>
+                <p><strong>Note: </strong>The class and the instance would normally be created in two separate files stored in the same folder. To use the class the simply typing import and the class name at the top of the file containing the instance, e.g.<span class="example">import Movie</span> would enable the class Movie to be used. The convention is to name classes with a capital letter.</p>
+            </div>
+        <div class="lesson">
+          <h1>Lesson 3b: Advanced Topic</h1>
+            <div class="lesson-content">
+              <h2>Inheritance</h2>
+                Inheritance allows variables from a class to be used in a second class. There may be a class "Parent" which contains the variable "surname" and "city of birth". A "Child" class may inherit these variable in addition to its own variable of "school".<br>
+                  <br><div class="example">
+                    class Parent():<br>
+                      &nbsp;def __init__(self, last_name, city_of_birth):<br>
+                      &nbsp;&nbsp;self.last_name = last_name<br>
+                      &nbsp;&nbsp;self.city_of_birth = city_of_birth<br>
+                    <br>
+                    class Child(Parent):<br>
+                      &nbsp;def __init__(self, last_name, city_of_birth, school):<br>
+                        &nbsp;&nbsp;Parent.__init__(self, last_name, city_of_birth)<br>
+                        &nbsp;&nbsp;self.school = school<br>
+                    <br>
+                    george = Child("Bush", "New Haven", "Yale")<br>
+                    print george.last_name --> Bush<br>
+                    print george.city_of_birth --> New Haven<br>
+                    print george.school --> Yale
+                  </div>
+            </div>
+            <div class="lesson-content">
+              <h2>Method Overriding</h2>
+                If there is a function or variable with the same name appears in the parent and the child the child takes precidence; this is known as method overriding.
+            </div>
+        </div>
+
+
+
+
+
+
+
+  </body>
+  </HTML>
